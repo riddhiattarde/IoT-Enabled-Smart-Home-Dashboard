@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>smart Home Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="dashboard">
+    <header>
+      <h1>Smart Home Dashboard</h1>
+      <div class="info-bar">
+        <p id="dateTime"></p>
+        <div class="weather-widget">🌤️ 24°C</div>
+      </div>
+    </header>
+    <main>
+      <section class="lighting">
+        <h2>Lighting</h2>
+        <div class="room">
+          <label for="living-room-light">Living Room</label>
+          <button id="living-room-light" class="toggle-button">Off</button>
+        </div>
+        <div class="room">
+          <label for="bedroom-light">Bedroom</label>
+          <button id="bedroom-light" class="toggle-button">Off</button>
+        </div>
+      </section>
+      <section class="temperature">
+        <h2>Temperature</h2>
+        <p>Current: <span id="current-temp">22°C</span></p>
+        <input type="range" id="temp-slider" min="16" max="30" value="22">
+      </section>
+      <section class="security">
+        <h2>Security</h2>
+        <div class="camera">
+          <p>Front Door</p>
+          <button class="action-button">View Live</button>
+        </div>
+        <div class="lock">
+          <p>Back Door</p>
+          <button class="action-button">Lock</button>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>© 2025 Smart Home Co. | <a href="#">Settings</a> | <a href="#">Help</a></p>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

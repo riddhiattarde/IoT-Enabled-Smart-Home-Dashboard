@@ -1,0 +1,25 @@
+document.addEventListener('DOMContentLoaded', () => {
+  const dateTimeElement = document.getElementById('dateTime');
+  const tempSlider = document.getElementById('temp-slider');
+  const currentTemp = document.getElementById('current-temp');
+
+  // Update date and time
+  function updateDateTime() {
+    const now = new Date();
+    dateTimeElement.textContent = now.toLocaleString();
+  }
+  setInterval(updateDateTime, 1000);
+
+  // Update temperature
+  tempSlider.addEventListener('input', () => {
+    currentTemp.textContent = `${tempSlider.value}°C`;
+  });
+
+  // Toggle light status
+  document.querySelectorAll('.toggle-button').forEach(button => {
+    button.addEventListener('click', () => {
+      button.textContent = button.textContent === 'On' ? 'Off' : 'On';
+      button.style.backgroundColor = button.textContent === 'On' ? '#66ff66' : '#ff6666';
+    });
+  });
+});
